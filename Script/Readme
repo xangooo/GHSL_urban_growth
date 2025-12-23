@@ -1,1 +1,102 @@
+# Google Earth Engine Scripts
+
+This folder contains all Google Earth Engine (GEE) JavaScript scripts used for analyzing **urban built-up area expansion and growth rates** using the **GHSL (Global Human Settlement Layer) built-up surface dataset (P2023A)**.
+
+The scripts are designed to be run in the **Google Earth Engine Code Editor**.
+
+---
+
+## 📂 Contents
+
+### `ghsl_urban_growth.js`
+
+Main analysis script that performs the following tasks:
+
+1. **Loads the GHSL built-up surface dataset**
+   - Dataset: `JRC/GHSL/P2023A/GHS_BUILT_S`
+   - Spatial resolution: 100 m
+   - Temporal coverage: 1975–2030
+
+2. **Defines Area of Interest (AOI)**
+   - Uses a user-drawn or imported `geometry`
+   - Exports AOI as GeoJSON for documentation and reuse
+
+3. **Visualizes built-up surfaces**
+   - Displays built-up area layers on the map
+   - Creates a multi-year built-up stack
+
+4. **Calculates built-up area**
+   - Computes total built-up area (sq. km) for each epoch
+   - Example outputs for 1975 and 2020
+
+5. **Time-series analysis**
+   - Generates a built-up area time-series chart
+   - Calculates year-to-year growth rate (%)
+
+6. **Exports tabular results**
+   - Single CSV containing:
+     - `year`
+     - `builtup_sqkm`
+     - `growth_rate_percent`
+
+7. **Exports map figures**
+   - Built-up maps for selected years
+   - Built-up stack visualization
+   - AOI boundary map
+   - Built-up change map (1975–2020)
+
+---
+
+## ▶ How to Run the Script
+
+1. Open **https://code.earthengine.google.com/**
+2. Create a new script
+3. Copy the contents of `ghsl_urban_growth.js`
+4. Define or import your **AOI geometry**
+5. Click **Run**
+6. Start exports from the **Tasks** tab
+
+---
+
+## 📤 Output Products
+
+The script generates the following outputs:
+
+### Tables (CSV)
+- Built-up area and growth rate per year
+
+### Raster Images (GeoTIFF / PNG)
+- Built-up maps for 1975 and 2020
+- Built-up stack (all years)
+- Built-up change map (1975–2020)
+- AOI boundary map
+
+---
+
+## ⚠ Notes & Best Practices
+
+- All area values are calculated in **square kilometers (sq. km)**
+- Growth rate is computed as **percentage change between consecutive epochs**
+- The first year has `null` growth rate by definition
+- Do **not** use `getInfo()` in exports to ensure server-side execution
+
+---
+
+## 📚 Dataset Reference
+
+European Commission, Joint Research Centre (JRC)  
+**Global Human Settlement Layer (GHSL) – Built-up Surface (P2023A)**  
+https://ghsl.jrc.ec.europa.eu/
+
+---
+
+## 👤 Author
+
+Prepared for urban growth analysis and reproducible research using Google Earth Engine.
+
+---
+
+## 📄 License
+
+See the repository root for license information.
 
