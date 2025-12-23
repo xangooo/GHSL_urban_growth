@@ -1,1 +1,101 @@
+# Figures
+
+This folder contains map figures exported from **Google Earth Engine (GEE)** for visualizing urban built-up dynamics derived from the **GHSL Built-up Surface** dataset.
+
+All images are exported as **PNG files** from the GEE map panel and are intended for use in documentation, reports, and publications.
+
+---
+
+## 📁 Contents
+
+figures/
+├── builtup_1975.png
+├── builtup_2020.png
+├── builtup_change_1975_2020.png
+├── aoi_boundary.png
+
+
+---
+
+## 🗺️ Figure Descriptions
+
+### 1️⃣ `builtup_1975.png`
+**Built-up area in 1975**
+
+- Dataset: GHSL Built-up Surface
+- Visualization:
+  - Color palette: `#efefef` (non-built) → `#a29f01` (built-up)
+  - Represents spatial extent of built-up land in 1975
+- Purpose:
+  - Baseline urban footprint
+  - Historical comparison
+
+---
+
+### 2️⃣ `builtup_2020.png`
+**Built-up area in 2020**
+
+- Dataset: GHSL Built-up Surface
+- Visualization:
+  - Color palette: `#efefef` (non-built) → `#a29f01` (built-up)
+- Purpose:
+  - Current urban extent
+  - Comparison with historical built-up patterns
+
+---
+
+### 3️⃣ `builtup_change_1975_2020.png`
+**Built-up change map (2020 – 1975)**
+
+- Derived by subtracting 1975 built-up from 2020 built-up
+- Visualization:
+  - Displayed using **opacity (gamma) settings**
+  - No discrete color palette applied
+- Interpretation:
+  - Brighter areas indicate higher intensity of built-up expansion
+  - Darker areas indicate little or no change
+- Purpose:
+  - Visualizing spatial patterns of urban growth
+
+---
+
+### 4️⃣ `aoi_boundary.png`
+**Area of Interest (AOI) boundary**
+
+- Represents the spatial extent used for analysis
+- Exported as a painted boundary from GEE
+- Purpose:
+  - Reference map
+  - Spatial context for all built-up figures
+
+---
+
+## 📝 Notes
+
+- All figures were generated using **Google Earth Engine JavaScript API**
+- Spatial resolution: **100 meters**
+- Coordinate system: Default Earth Engine projection
+- These figures support:
+  - Built-up area analysis
+  - Growth rate computation
+  - Temporal comparison of urban expansion
+
+---
+
+## 📚 Data Source
+
+- **GHSL (Global Human Settlement Layer) – Built-up Surface**
+- Developed by the Joint Research Centre (JRC), European Commission
+
+---
+
+## 📌 Usage
+
+These figures can be used for:
+- Academic publications
+- GitHub documentation
+- Urban growth analysis reports
+- Presentations and posters
+
+Please cite the GHSL dataset and Google Earth Engine where applicable.
 
